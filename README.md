@@ -26,17 +26,17 @@ npm install
 DEBUG=myapp:* & npm start  
 windows에서는 앞에 set을 붙여줍니다!  
 
-#Basic Routing
+# Basic Routing
 app.METHOD(PATH, HANDLER)  
 get post put delete...  
 
-#Static files  
+# Static files  
 app.use(express.static('public')) 
 => /images/kitten.jpg  
 app.use(express.static('files'))  
-추가하면 됩니다. 위에서부터 검색합니다.
+추가하면 됩니다. 위에서부터 검색합니다.  
 app.use('/static', express.static(path.join(__dirname, 'public')))  
-이런식으로 하면 /static/images/kitten.jpg 이렇게 경로를 지정해줄수 있어요!
+이런식으로 하면 /static/images/kitten.jpg 이렇게 경로를 지정해줄수 있어요!  
 
 
 
