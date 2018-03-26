@@ -15,7 +15,7 @@ express 공식 문서 보고 실습해본 소스입니다.
 1. npm install express-generator -g  
 express command-line tool을 설치합니다.  
 
-2. myapp 이라는 이름의 앱을 만들어보자. view 엔진은 pug(https://pugjs.org)로 설정한다.  
+2. myapp 이라는 이름의 앱을 만들어보자. view 엔진은 [pug](https://pugjs.org)로 설정한다.  
 express --view=pug myapp  
 
 3. dependencies 인스톨!  
@@ -24,7 +24,22 @@ npm install
 
 4. app 실행!  
 DEBUG=myapp:* & npm start  
-windows에서는 앞에 set을 붙여줍니다!
+windows에서는 앞에 set을 붙여줍니다!  
+
+#Basic Routing
+app.METHOD(PATH, HANDLER)  
+get post put delete...  
+
+#Static files  
+app.use(express.static('public')) 
+=> /images/kitten.jpg  
+app.use(express.static('files'))  
+추가하면 됩니다. 위에서부터 검색합니다.
+app.use('/static', express.static(path.join(__dirname, 'public')))  
+이런식으로 하면 /static/images/kitten.jpg 이렇게 경로를 지정해줄수 있어요!
+
+
+
 
 
 
